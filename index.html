@@ -31,6 +31,13 @@
 
 <body>
 
+<nav class="page-links" aria-label="Социальные сети и почта">
+        <a href="https://t.me/slappetizer" target="_blank" rel="noopener"><span class="link-full">ТЕЛЕГА</span><span class="link-short">TG</span></a>
+        <a href="https://instagram.com/slappetizer" target="_blank" rel="noopener"><span class="link-full">ИНСТА*</span><span class="link-short">IG*</span></a>
+        <a href="https://youtube.com/@slappetizer" target="_blank" rel="noopener"><span class="link-full">ЮТУБ</span><span class="link-short">YT</span></a>
+        <a href="mailto:a@svarganil.ru"><span class="link-full">ПОЧТА</span><span class="link-short">ПОЧТА</span></a>
+</nav>
+
 <button class="background-loader" type="button" aria-label="Перезапустить анимацию">
 <svg class="loader" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="350" viewBox="-100 -100 450 435">
     <title> Pizza Hut </title>
@@ -75,18 +82,52 @@
   </svg>
 </button>
 
-<div class="menu-shell" id="menu-sheet">
+<button class="recipes-trigger" id="recipes-trigger" type="button" aria-controls="menu-sheet" aria-expanded="false">Рецепты</button>
+
+<div class="menu-shell" id="menu-sheet" inert aria-hidden="true">
+  <div class="menu-paper">
   <div class="menu-top">
     <div class="menu-top-row">
-      <button class="menu-label" id="menu-label" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
-      <div class="menu-links">
-        <a href="https://t.me/slappetizer" target="_blank" rel="noopener"><span class="link-full">ТЕЛЕГА</span><span class="link-short">TG</span></a>
-        <a href="https://instagram.com/slappetizer" target="_blank" rel="noopener"><span class="link-full">ИНСТА*</span><span class="link-short">IG*</span></a>
-        <a href="https://youtube.com/@slappetizer" target="_blank" rel="noopener"><span class="link-full">ЮТУБ</span><span class="link-short">YT</span></a>
-        <a href="mailto:a@svarganil.ru"><span class="link-full">ПОЧТА</span><span class="link-short">ПОЧТА</span></a>
-      </div>
+      <button class="menu-label" id="menu-label" type="button" aria-label="Закрыть меню">✕</button>
     </div>
   </div>
+
+  <div class="menu-content" id="menu-content" inert>
+    <div class="notebook-photo">
+      <img src="assets/photo/test.webp" alt="Фотография для карточки Печёные баклажаны с томатами и страчателлой">
+    </div>
+    <div class="notebook-content">
+      <h2>Печёные баклажаны с томатами и страчателлой</h2>
+      <p><strong>Семейный рецепт.</strong></p>
+      <section class="recipe-prepare" aria-labelledby="prepare-title">
+        <h3 id="prepare-title">Ингредиенты:</h3>
+        <ul class="ingredient-list">
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count">1</span><span class="ingredient-unit" data-unit="шт.">шт.</span><span class="ingredient-name">Баклажан</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count">400</span><span class="ingredient-unit" data-unit="мл.">мл.</span><span class="ingredient-name">Перетёртые томаты</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count">1</span><span class="ingredient-unit" data-unit="ч.л.">ч.л.</span><span class="ingredient-name">Винный уксус</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count">1</span><span class="ingredient-unit" data-unit="ст.л.">ст.л.</span><span class="ingredient-name">Базилик (сушёный)</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count">1</span><span class="ingredient-unit" data-unit="щеп.">щеп.</span><span class="ingredient-name">Орегано</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count">1</span><span class="ingredient-unit" data-unit="ч.л.">ч.л.</span><span class="ingredient-name">Сахар</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count">1</span><span class="ingredient-unit" data-unit="зуб.">зуб.</span><span class="ingredient-name">Чеснок</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count"></span><span class="ingredient-unit" data-unit="По вкусу">По вкусу</span><span class="ingredient-name">Соль</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count"></span><span class="ingredient-unit" data-unit="По вкусу">По вкусу</span><span class="ingredient-name">Перец</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count">1</span><span class="ingredient-unit" data-unit="уп.">уп.</span><span class="ingredient-name">Страчателла</span></button></li>
+          <li><button class="ingredient" type="button" aria-pressed="false"><span class="ingredient-count"></span><span class="ingredient-unit" data-unit="По вкусу">По вкусу</span><span class="ingredient-name">Базилик (свежий)</span></button></li>
+        </ul>
+        <button class="recipe-ready" type="button">У меня всё есть.</button>
+        <div class="recipe-directions" aria-disabled="true">
+          <h3>Приготовление:</h3>
+          <ol>
+            <li>Баклажан разрезаем пополам, делаем надрезы, сбрызгиваем оливковым маслом, солим и запекаем 35 минут при 200 °C.</li>
+            <li>Перетёртые томаты выливаем в сковороду, добавляем соль, перец, сахар, орегано, базилик винный уксус и варим соус 15 минут, помешивая. В конце добавляем измельчённый чеснок.</li>
+            <li>Собираем блюдо: на дно глубокой тарелки выкладываем пару больших ложек соуса, сверху — баклажан, далее — страчателла, оливковое масло и зелень.</li>
+          </ol>
+        </div>
+        <span class="recipe-status" role="status" aria-live="polite"></span>
+      </section>
+    </div>
+  </div>
+</div>
 
 </div>
 
@@ -96,16 +137,22 @@
   <script>
     const menuSheet = document.getElementById('menu-sheet');
     const menuLabel = document.getElementById('menu-label');
-    const updateMenuLabel = (isOpen) => {
-      if (!menuLabel) return;
-      menuLabel.textContent = isOpen ? '✕' : '☰';
-    };
+    const menuContent = document.getElementById('menu-content');
+    const recipesTrigger = document.getElementById('recipes-trigger');
 
-    const toggleMenu = () => {
-      const isOpen = menuSheet.classList.toggle('open');
-      menuLabel.setAttribute('aria-expanded', String(isOpen));
-      menuLabel.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
-      updateMenuLabel(isOpen);
+    const setMenuOpen = (isOpen) => {
+      menuSheet.inert = !isOpen;
+      menuContent.inert = !isOpen;
+      menuSheet.classList.toggle('open', isOpen);
+      recipesTrigger.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) {
+        menuSheet.removeAttribute('aria-hidden');
+        menuSheet.scrollTop = 0;
+        menuLabel.focus({ preventScroll: true });
+      } else {
+        recipesTrigger.focus({ preventScroll: true });
+        menuSheet.setAttribute('aria-hidden', 'true');
+      }
       const sound = document.getElementById(isOpen ? 'menuOpenSound' : 'menuCloseSound');
       if (sound) {
         sound.currentTime = 0;
@@ -113,19 +160,14 @@
       }
     };
 
-    if (menuLabel) {
-      menuLabel.addEventListener('click', (event) => {
-        event.stopPropagation();
-        toggleMenu();
-      });
-      updateMenuLabel(menuSheet.classList.contains('open'));
-    }
-
-    menuSheet.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', (event) => event.stopPropagation());
+    recipesTrigger.addEventListener('click', () => setMenuOpen(true));
+    menuLabel.addEventListener('click', () => setMenuOpen(false));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menuSheet.classList.contains('open')) setMenuOpen(false);
     });
   </script>
   <script src="assets/vendor/TweenMax.min.js"></script>
   <script src="assets/loader.js"></script>
+  <script src="assets/recipe.js"></script>
 </body>
 </html>
